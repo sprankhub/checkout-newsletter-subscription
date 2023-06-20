@@ -1,15 +1,18 @@
 define([
-    'jquery',
-    'mage/utils/wrapper',
-    'MageSuite_CheckoutNewsletterSubscription/js/model/assigner'
+  "jquery",
+  "mage/utils/wrapper",
+  "MageSuite_CheckoutNewsletterSubscription/js/model/assigner",
 ], function ($, wrapper, assigner) {
-    'use strict';
+  "use strict";
 
-    return function (placeOrderAction) {
-        return wrapper.wrap(placeOrderAction, function (originalAction, serviceUrl, payload, messageContainer) {
-            assigner(payload['paymentMethod']);
+  return function (placeOrderAction) {
+    return wrapper.wrap(
+      placeOrderAction,
+      function (originalAction, serviceUrl, payload, messageContainer) {
+        assigner(payload["paymentMethod"]);
 
-            return originalAction(serviceUrl, payload, messageContainer);
-        });
-    };
+        return originalAction(serviceUrl, payload, messageContainer);
+      }
+    );
+  };
 });

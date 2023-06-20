@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="checkout_newsletter_subscription" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>Checkout Newsletter Subscription</label>
+            <tab>magesuite</tab>
+            <resource>MageSuite_CheckoutNewsletterSubscription::config</resource>
+            <group id="logged_in_customer" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Logged In Customer</label>
+                <field id="is_visible" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Is Visible</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="is_visible_for_subscribed" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Is Visible for Subscribed</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="is_checked_by_default" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Is Checked by Default</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="is_checked_for_unsubscribed" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Is Checked for Unsubscribed</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="is_checked_for_not_active" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Is Checked for Not Activated</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="guest_customer" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Guest Customer</label>
+                <field id="is_visible" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Is Visible</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="is_visible_for_subscribed" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Is Visible for Subscribed</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="is_checked_by_default" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Is Checked by Default</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="is_checked_for_unsubscribed" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Is Checked for Unsubscribed</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="is_checked_for_not_active" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Is Checked for Not Activated</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

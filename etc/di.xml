@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="MageSuite\CheckoutNewsletterSubscription\Api\GuestConfigManagementInterface" type="MageSuite\CheckoutNewsletterSubscription\Service\GuestConfigManagement"/>
+
     <type name="Magento\Checkout\Api\PaymentInformationManagementInterface">
         <plugin name="assign_newsletter_information"
                 type="MageSuite\CheckoutNewsletterSubscription\Plugin\Magento\Checkout\Api\PaymentInformationManagementInterface\NewsletterSubscribe"

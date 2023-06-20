@@ -23,6 +23,13 @@
                     <ticket_id>IPET-1756</ticket_id>
                 </entry>
             </tag>
+            <tag version="2.1.0" date="2023-06-20">
+                <entry>
+                    <type>FEAT</type>
+                    <overview>Add configuration for field visibility and default state</overview>
+                    <ticket_id>IPET-1920</ticket_id>
+                </entry>
+            </tag>
         </changelog>
     </module>
 </config>
