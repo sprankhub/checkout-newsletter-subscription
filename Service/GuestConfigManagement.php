@@ -32,6 +32,7 @@ class GuestConfigManagement implements \MageSuite\CheckoutNewsletterSubscription
 
         $fieldConfig = [
             'isSubscriptionExist' => (bool)$subscription->getId(),
+            'isSubscriptionConfirmed' => $subscription->getStatus() == \Magento\Newsletter\Model\Subscriber::STATUS_SUBSCRIBED,
             'isVisible' => $this->isVisibleForGuest($subscription),
             'isChecked' => $this->isCheckedForGuest($subscription)
         ];
