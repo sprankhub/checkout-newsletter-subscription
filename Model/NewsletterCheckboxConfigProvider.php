@@ -31,6 +31,7 @@ class NewsletterCheckboxConfigProvider implements \Magento\Checkout\Model\Config
             return [
                 'newsletter_checkbox' => [
                     'isSubscriptionExist' => false,
+                    'isSubscriptionConfirmed' => false,
                     'isVisible' => $this->configuration->isVisibleForGuestCustomer(),
                     'isChecked' => $this->configuration->isCheckedByDefaultForGuestCustomer()
                 ]
@@ -44,6 +45,7 @@ class NewsletterCheckboxConfigProvider implements \Magento\Checkout\Model\Config
         return [
             'newsletter_checkbox' => [
                 'isSubscriptionExist' => (bool)$subscription->getId(),
+                'isSubscriptionConfirmed' => $subscription->getStatus() == \Magento\Newsletter\Model\Subscriber::STATUS_SUBSCRIBED,
                 'isVisible' => $this->isVisibleForLoggedIn($customer, $subscription),
                 'isChecked' => $this->isCheckedForLoggedIn($customer, $subscription)
             ]
